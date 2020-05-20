@@ -80,7 +80,7 @@ function SetKarte()
 
 	$KarteCount=0;
 	$KarteLine=0;
-	$KarteBoard=20;//¿–â‚Ì”
+	$KarteBoard=25;//¿–â‚Ì”
 	$KarteVertical=30;//’†c•
 	$KarteBox=2;
 	$KarteBox2=$KarteWindowY+2;

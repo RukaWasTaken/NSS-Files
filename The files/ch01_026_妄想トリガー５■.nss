@@ -1587,9 +1587,12 @@ if($妄想トリガー５ == 0)
 
 
 
-	CreateWindow("ウィンドウ１", 500, Center, InBottom, 1280, 218, false);
+//	CreateWindow("ウィンドウ１", 500, Center, InBottom, 1280, 218, false);
+	CreateWindow("ウィンドウ１", 500, Center, InBottom, 1280, 274, false);
 	CreateTextureEX("ウィンドウ１/ログ１", 500, @0, -339, "cg/bg/bg042_01_2_ログプリント_a.jpg");
-	CreateTextureEX("ログ２", 300, 0, -723, "cg/bg/bg042_01_2_ログプリント_a.jpg");
+	CreateTextureEX("ログ２", 300, 0, -703, "cg/bg/bg042_01_2_ログプリント_a.jpg");
+//	CreateTextureEX("ログ２", 300, 0, -651, "cg/bg/bg042_01_2_ログプリント_a.jpg");
+//	CreateTextureEX("ログ２", 300, 0, -578, "cg/bg/bg042_01_2_ログプリント_a.jpg");
 
 //――――――――――――――――――――――――――――――――――――――
 <PRE box00>
@@ -1605,6 +1608,7 @@ if($妄想トリガー５ == 0)
 {	CreateColor("Black", 1000, 0, 0, 1280, 720, "Black");
 	Fade("Black", 0, 0, null, false);
 	Fade("Black", 500, 1000, null, true);
+//	CreateColor("ログ線", 400, 0, 0, 1280, 276, "Black");
 	CreateColor("ログ線", 400, 0, 0, 1280, 276, "Black");
 	Fade("ウィンドウ１/ログ１", 1, 1000, null, false);
 	Fade("ログ２", 1, 1000, null, true);

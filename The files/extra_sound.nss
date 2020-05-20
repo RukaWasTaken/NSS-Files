@@ -88,7 +88,7 @@ scene extra_sound_main
 	$Sound_Name_Call_Loop=true;
 	$SoundName_Number=1;
 
-	$SoundName_Board=42;
+	$SoundName_Board=53;
 	$SoundName_Vertical=26;
 
 	$Sound_Space = ($SoundName_Board * $SoundName_Vertical);
@@ -506,7 +506,7 @@ scene extra_sound_main
 		$SoundName = "WindowNAME/NUMBER/Name_" + $SoundName_Number;
 		$SoundName_Kind = "WindowNAME/NUMBER/Kind_" + $SoundName_Number;
 		$SoundName_icon = "WindowNAME/NUMBER/icon_" + $SoundName_Number;
-		$SoundNum_icon = (($SoundName_Number*32)-32) * 4 / 5;
+		$SoundNum_icon = (($SoundName_Number*26)-27);
 
 		$CHOICE ="WindowNAME/NUMBER/Choice_" + $SoundName_Number;
 		$Sound_Name_Usual = $CHOICE + "/MouseUsual/img";
@@ -676,7 +676,7 @@ scene extra_sound_main
 	Request("@エキストラスクリーン", Disused);
 
 //CursorSet
-	MoveCursor(104,96);
+
 
 //page用
 		$MusicTop=0;
@@ -2411,7 +2411,7 @@ function MusicMoveStart()
 		if($SYSTEM_XBOX360_button_up_down){
 
 			if($MusicTop==53){
-				MoveCursor(374,426);//53
+				;//53
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img*", 0, 0, null, false);
@@ -2419,68 +2419,68 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @-1100, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @-1100, null, false);
 				$MusicTop=53;
-				MoveCursor(374,426);//53
+				;//53
 			}
 
 		}else if($SYSTEM_XBOX360_button_left_down){
 
 			if($MusicTop==53){
-				MoveCursor(374,426);//53
+				;//53
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img*", 0, 0, null, false);
 				Move("@WindowNAME/NUMBER*", 0, @0, @-1100, null, false);
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @-1100, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @-1100, null, false);
-				MoveCursor(374,426);//53
+				;//53
 				$MusicTop=53;
 				$MMGOTO053=true;
 			}
 
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(134,96);//re
+			;//re
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(134,96);//re
+			;//re
 		}
 	}else if($MusicCsrX>=155&&$MusicCsrX<=181&&$MusicCsrY>=108&&$MusicCsrY<=134){
 	//▽repeat
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(104,96);//stop
+			;//stop
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(104,96);//stop
+			;//stop
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(164,96);//next
+			;//next
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(164,96);//next
+			;//next
 		}
 	}else if($MusicCsrX>=195&&$MusicCsrX<=217&&$MusicCsrY>=108&&$MusicCsrY<=134){
 	//▽next
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(134,96);//repeat
+			;//repeat
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(134,96);//repeat
+			;//repeat
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(195,96);//play
+			;//play
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(195,96);//play
+			;//play
 		}
 	}else if($MusicCsrX>=228&&$MusicCsrX<=260&&$MusicCsrY>=108&&$MusicCsrY<=134){
 	//▽play
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(164,96);//next
+			;//next
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(164,96);//next
+			;//next
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(226,96);//return
+			;//return
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(226,96);//return
+			;//return
 		}
 	}else if($MusicCsrX>=272&&$MusicCsrX<=296&&$MusicCsrY>=108&&$MusicCsrY<=134){
 	//▽return
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(195,96);//play
+			;//play
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(195,96);//play
+			;//play
 		}else if($SYSTEM_XBOX360_button_right_down){
 
 			if($MusicTop==53){
@@ -2489,13 +2489,13 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER*", 0, @0, @+1100, null, false);
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @+1100, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @+1100, null, false);
-				MoveCursor(374,194);//53
+				;//53
 				$MusicTop=0;
 //おがみ：ここのフラグ101で合ってるのかな？
 //				$MMGOTO001=true;
 				$MMGOTO101=true;
 			}else{
-				MoveCursor(374,194);//No.1
+				;//No.1
 			}
 
 		}else if($SYSTEM_XBOX360_button_down_down){
@@ -2506,13 +2506,13 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER*", 0, @0, @+1100, null, false);
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @+1100, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @+1100, null, false);
-				MoveCursor(374,194);//53
+				;//53
 				$MusicTop=0;
 //おがみ：ここのフラグ101で合ってるのかな？
 //				$MMGOTO001=true;
 				$MMGOTO101=true;
 			}else{
-			MoveCursor(374,194);//No.1
+			;//No.1
 			}
 
 		}
@@ -2520,7 +2520,7 @@ function MusicMoveStart()
 	//▽No.01
 		if($SYSTEM_XBOX360_button_up_down){
 			if($MusicTop==1){
-				MoveCursor(226,96);//Stop
+				;//Stop
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img*", 0, 0, null, false);
@@ -2532,7 +2532,7 @@ function MusicMoveStart()
 
 		}else if($SYSTEM_XBOX360_button_left_down){
 			if($MusicTop==1){
-				MoveCursor(226,96);//Stop
+				;//Stop
 
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
@@ -2545,105 +2545,105 @@ function MusicMoveStart()
 			}
 
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,220);//No.02
+			;//No.02
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,220);//No.02
+			;//No.02
 		}
 	}else if($MusicCsrX>=448 && $MusicCsrX<=488 && $MusicCsrY>=263 && $MusicCsrY<=294){
 	//▽No.02
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,194);//No.01
+			;//No.01
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,194);//No.01
+			;//No.01
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,245);//No.03
+			;//No.03
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,245);//No.03
+			;//No.03
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=296&&$MusicCsrY<=327){
 	//▽No.03
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,220);//No.02
+			;//No.02
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,220);//No.02
+			;//No.02
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,272);//No.04
+			;//No.04
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,272);//No.04
+			;//No.04
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=329&&$MusicCsrY<=350){
 	//▽No.04
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,245);//No.03
+			;//No.03
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,245);//No.03
+			;//No.03
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,298);//No.05
+			;//No.05
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,298);//No.05
+			;//No.05
 		}
 		Wait(10);
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=352&&$MusicCsrY<=383){
 	//▽No.05
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,272);//No.04
+			;//No.04
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,272);//No.04
+			;//No.04
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,324);//No.06
+			;//No.06
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,324);//No.06
+			;//No.06
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=385&&$MusicCsrY<=416){
 	//▽No.06
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,298);//No.05
+			;//No.05
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,298);//No.05
+			;//No.05
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,351);//No.07
+			;//No.07
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,351);//No.07
+			;//No.07
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=418&&$MusicCsrY<=449){
 	//▽No.07
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,324);//No.06
+			;//No.06
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,324);//No.06
+			;//No.06
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,377);//No.08
+			;//No.08
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,377);//No.08
+			;//No.08
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=451&&$MusicCsrY<=482){
 	//▽No.08
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,351);//No.07
+			;//No.07
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,351);//No.07
+			;//No.07
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,404);//No.09
+			;//No.09
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,404);//No.09
+			;//No.09
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=484&&$MusicCsrY<=516){
 	//▽No.09
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,377);//No.08
+			;//No.08
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,377);//No.08
+			;//No.08
 		}else if($SYSTEM_XBOX360_button_right_down){
-			MoveCursor(374,426);//No.10
+			;//No.10
 		}else if($SYSTEM_XBOX360_button_down_down){
-			MoveCursor(374,426);//No.10
+			;//No.10
 		}
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=518&&$MusicCsrY<=547){
 	//▽No.09
 		if($SYSTEM_XBOX360_button_up_down){
-			MoveCursor(374,404);//No.08
+			;//No.08
 		}else if($SYSTEM_XBOX360_button_left_down){
-			MoveCursor(374,404);//No.08
+			;//No.08
 		}else if($SYSTEM_XBOX360_button_right_down){
 			if($MusicTop==53){
 
@@ -2657,7 +2657,7 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @1100, null, false);
 				$MusicTop=0;
 				$MMGOTO101=true;
-				MoveCursor(104,96);//Stop
+				;//Stop
 
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
@@ -2665,12 +2665,12 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER*", 0, @0, @-25, null, false);
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @-25, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @-25, null, false);
-				MoveCursor(374,426);
+				;
 				$MMGOTO=true;
 			}
 		}else if($SYSTEM_XBOX360_button_down_down){
 			if($MusicTop==53){
-				MoveCursor(104,96);//Stop
+				;//Stop
 
 //おがみ：変数入力
 //				$MusicTop=0;
@@ -2682,7 +2682,7 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @1100, null, false);
 				$MusicTop=0;
 				$MMGOTO101=true;
-				MoveCursor(104,96);//Stop
+				;//Stop
 
 			}else{
 				Fade("@WindowNAME/NUMBER/Choice_*/MouseOver/img", 0, 0, null, false);
@@ -2690,7 +2690,7 @@ function MusicMoveStart()
 				Move("@WindowNAME/NUMBER*", 0, @0, @-25, null, false);
 				Move("@WindowNAME/NUMBER/Choice_*/*/*", 0, @0, @-25, null, false);
 				Move("@WindowNAME/NUMBER/*/*", 0, @0, @-25, null, false);
-				MoveCursor(374,426);
+				;
 				$MMGOTO=true;
 			}
 		}
@@ -2759,7 +2759,7 @@ function MusicMoveStart()
 			MusicBackStart2();
 			Wait(50);
 		}
-		MoveCursor(374,194);//1
+		;//1
 	}else if($MusicCsrX>=458&&$MusicCsrX<=478&&$MusicCsrY>=484&&$MusicCsrY<=516){
 		MusicNextStart();
 		Wait(50);
@@ -2771,9 +2771,9 @@ function MusicMoveStart()
 
 		if($MusicBottom==25&&($SYSTEM_XBOX360_button_down_down||$SYSTEM_XBOX360_button_right_down)){
 			Fade("カルテオーバー", 0, 0, null, true);
-			MoveCursor(512,480);//OK
+			;//OK
 		}else{
-			MoveCursor(374,404);//7
+			;//7
 		}
 	}
 */
@@ -2787,10 +2787,10 @@ function MusicNextStart()
 {
 	$MMMove=100;
 
-//	MoveCursor(1024,404);//No.09
+//	;//No.09
 	Move("WindowNAME/NUMBER*", $MMMove, @0, @-25, null, false);
 	Move("WindowNAME/NUMBER*/*/*", $MMMove, @0, @-25, null, true);
-//	MoveCursor(374,404);//No.09
+//	;//No.09
 
 	$MusicTop++;
 	$MusicBottom++;
@@ -2801,12 +2801,12 @@ function MusicBackStart()
 {
 	$MusicMove=100;
 
-//	MoveCursor(1024,194);//No.01
+//	;//No.01
 
 	Move("WindowNAME/NUMBER*", $MusicMove, @0, @+25, null, false);
 	Move("WindowNAME/NUMBER*/*/*", $MusicMove, @0, @+25, null, true);
 
-//	MoveCursor(326,194);//No.01
+//	;//No.01
 
 //	$SYSTEM_XBOX360_button_left_down=false;$SYSTEM_XBOX360_button_right_down=false;
 //	$SYSTEM_XBOX360_button_up_down=false;$SYSTEM_XBOX360_button_down_down=false;

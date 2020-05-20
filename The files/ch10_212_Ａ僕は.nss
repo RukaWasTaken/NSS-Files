@@ -86,7 +86,7 @@ function ch10_212_Ａ僕は()
 	SetText($SYSTEM_present_preprocess,$SYSTEM_present_text);
 	TypeBeginDX(200,0);//――――――――――――――――――――――――――――――
 
-	CreateColor("色１", 500, 1065, 0, 215, 720, "White");
+	CreateColor("色１", 500, 852, 0, 172, 576, "White");
 	Fade("色１", 0, 0, null, false);
 	Request("色１", AddRender);
 	Fade("色１", 10, 1000, null, true);
@@ -131,7 +131,7 @@ function ch10_212_Ａ僕は()
 	SetText($SYSTEM_present_preprocess,$SYSTEM_present_text);
 	TypeBeginEX();//――――――――――――――――――――――――――――――
 
-	CreateColor("色１", 500, 0, 0, 215, 720, "White");
+	CreateColor("色１", 500, 0, 0, 172, 576, "White");
 	Fade("色１", 0, 0, null, false);
 	Request("色１", AddRender);
 	Fade("色１", 10, 1000, null, true);
@@ -176,7 +176,7 @@ function ch10_212_Ａ僕は()
 	SetText($SYSTEM_present_preprocess,$SYSTEM_present_text);
 	TypeBeginEX();//――――――――――――――――――――――――――――――
 
-	CreateColor("色１", 500, 852, 0, 215, 720, "White");
+	CreateColor("色１", 500, 682, 0, 172, 576, "White");
 	Fade("色１", 0, 0, null, false);
 	Request("色１", AddRender);
 	Fade("色１", 10, 1000, null, true);
@@ -221,7 +221,7 @@ function ch10_212_Ａ僕は()
 	SetText($SYSTEM_present_preprocess,$SYSTEM_present_text);
 	TypeBeginEX();//――――――――――――――――――――――――――――――
 
-	CreateColor("色１", 500, 212, 0, 215, 720, "White");
+	CreateColor("色１", 500, 170, 0, 172, 576, "White");
 	Fade("色１", 0, 0, null, false);
 	Request("色１", AddRender);
 	Fade("色１", 10, 1000, null, true);
@@ -266,7 +266,7 @@ function ch10_212_Ａ僕は()
 	SetText($SYSTEM_present_preprocess,$SYSTEM_present_text);
 	TypeBeginEX();//――――――――――――――――――――――――――――――
 
-	CreateColor("色１", 500, 640, 0, 215, 720, "White");
+	CreateColor("色１", 500, 512, 0, 172, 576, "White");
 	Fade("色１", 0, 0, null, false);
 	Request("色１", AddRender);
 	Fade("色１", 10, 1000, null, true);

@@ -85,9 +85,9 @@ function LoadBox()
 	Request("box360", Lock);
 	Request("box360", Hideable);
 
-	LoadFont("フォント１Ａ", "ＭＳ ゴシック", 25, #FFFFFF, #000000, 500, AROUND, "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっゃゅょアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポァィゥェォッャュョ、。ー…！？―「」『』１２３４５６７８９０");
-	LoadFont("フォント１Ｂ", "ＭＳ ゴシック", 25, #FFFFFF, #000000, 500, AROUND, "一今日敵味方思分行時言聞見何人終好急");
-	LoadFont("フォント１Ｃ", "ＭＳ ゴシック", 25, #FFFFFF, #000000, 500, AROUND, "渋谷西條拓巳将軍梨深美優愛梢七海星来判諏訪波多野呂瀬猪鼻倉持百瀬葉月三住目死体貼付ＤＱＮ");
+	LoadFont("フォント１Ａ", "MS-Gothic-Mod", 25, #FFFFFF, #000000, 500, AROUND, "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽぁぃぅぇぉっゃゅょアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポァィゥェォッャュョ、。ー…！？―「」『』１２３４５６７８９０");
+	LoadFont("フォント１Ｂ", "MS-Gothic-Mod", 25, #FFFFFF, #000000, 500, AROUND, "一今日敵味方思分行時言聞見何人終好急");
+	LoadFont("フォント１Ｃ", "MS-Gothic-Mod", 25, #FFFFFF, #000000, 500, AROUND, "渋谷西條拓巳将軍梨深美優愛梢七海星来判諏訪波多野呂瀬猪鼻倉持百瀬葉月三住目死体貼付ＤＱＮ");
 
 	Request("フォント１Ａ", Lock);
 	Request("フォント１Ｂ", Lock);
@@ -112,7 +112,7 @@ function SetText($boxtype,$textnumber)
 {
 	Move("box00", 0, @0, @576, null, true);
 
-	SetFont("ＭＳ ゴシック", 24, #FFFFFF, #000000, 500, AROUND);
+	SetFont("MS-Gothic-Mod", 24, #FFFFFF, #000000, 500, AROUND);
 	LoadText($構文名,$boxtype,$textnumber,800,120,-1,35);
 
 	Request($textnumber, Erase);
@@ -124,7 +124,7 @@ function SetText($boxtype,$textnumber)
 
 function SetText2($boxtype,$textnumber)
 {
-	SetFont("ＭＳ ゴシック", 24, #000000, #FFFFFF, 500, AROUND);
+	SetFont("MS-Gothic-Mod", 24, #000000, #FFFFFF, 500, AROUND);
 	LoadText($構文名,$boxtype,$textnumber,800,120,-1,35);
 
 	Request($textnumber, Erase);
@@ -134,7 +134,7 @@ function SetText2($boxtype,$textnumber)
 
 function SetText3($boxtype,$textnumber)
 {
-	SetFont("ＭＳ ゴシック", 24, #000000, #CCCCCC, HEAVY, AROUND);
+	SetFont("MS-Gothic-Mod", 24, #000000, #CCCCCC, HEAVY, AROUND);
 	LoadText($構文名,$boxtype,$textnumber,800,120,-1,35);
 
 	Request($textnumber, Erase);

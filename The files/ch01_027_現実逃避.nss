@@ -117,7 +117,7 @@ function ch01_027_Œ»ŽÀ“¦”ð()
 	
 	ClearAll(2000);
 	
-	if(#ClearG){
+	if(#ClearG == true){
 		CreateMovie360("‚n‚o‚Q", 100, 0, 0, false, false, "dx/mvChaosLogic.avi");
 		Zoom("‚n‚o‚Q", 0, 800, 800, null, false);
 		Move("‚n‚o‚Q", 0, @-128, @-72, null, false);

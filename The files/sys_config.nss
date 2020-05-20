@@ -45,7 +45,7 @@ chapter main
 	//スクロールスピード
 	$ConfigScrollSpeed=24;
 
-	SetFont("ＭＳ ゴシック",17,#00000,#FFFFFF,500,NONE);
+	SetFont("ArialTahomaUnicod MS",17,#00000,#FFFFFF,500,NONE);
 
 	//■準備「スクリーン」//※タイトルとかメニューから？それとも？
 	if(!$PLACE_title&&!$SYSTEM_menu_enable&&!$SYSTEM_menu_lock){
@@ -198,11 +198,13 @@ function ConfigSet()
 		$ConfigExitV=ImageVertical("Config1a_EXIT/MouseUsual/hit");
 
 		//▼定義「全体スクロール」
-		//CreateScrollbar("ナット名", 描画優先度, 最小値Ｘ座標, 最小値Ｙ座標, 最大値Ｘ座標, 最大値Ｙ座標, 初期値, スクロールタイプ, "カーソルバーイメージ")
-		//CreateScrollbar("Config9f_Scrollbar", 10001, 1130, 214, 1130, 556, 0, VERTICAL, "cg/sys/config/スクロールボタン.png");
-		//SetScrollbar("Config9f_Scrollbar", "Config9f_Scrollbar");
-		//CreateTexture("Config9f_Scrollbar", 10001, 1130, 214, "cg/sys/config/スクロールボタン.png");
-
+//		CreateScrollbar("ナット名", 描画優先度, 最小値Ｘ座標, 最小値Ｙ座標, 最大値Ｘ座標, 最大値Ｙ座標, 初期値, スクロールタイプ, "カーソルバーイメージ")
+		CreateChoice("Config9f_Scrollbar");
+		CreateScrollbar("Config9f_Scrollbar", 10001, 904, 171, 904, 445, 0, VERTICAL, "cg/sys/config/スクロールボタン.png");
+		SetScrollbar("Config9f_Scrollbar", "Config9f_Scrollbar");
+		SetScrollSpeed("Config9f_Scrollbar",31);
+		SetAlias("Config9f_Scrollbar", "Config9f_Scrollbar");
+		
 		//▼定義「一枚目」
 		CreateTexture("Config1f_ConfigGround", 10000, Center, 48, "cg/sys/config/コンフィグシート.jpg");
 
@@ -1235,6 +1237,8 @@ function ConfigSelect()
 
 	$ConfigNextFlag=0;
 	$ConfigPage=1;
+	
+	$PreConfigScrollbar = Integer((ImageVertical("Config1f_ConfigGround")-500) * ScrollbarValue("Config9f_Scrollbar"));
 
 	while($SYSTEM_menu_config_enable)
 	{
@@ -1297,6 +1301,7 @@ function ConfigSelect()
 				#SYSTEM_sound_volume_bgm=ScrollbarValue("Config1a_BVolume")*1000;
 				#SYSTEM_sound_volume_se=ScrollbarValue("Config1a_SVolume")*1000;
 				#SYSTEM_sound_volume_voice=ScrollbarValue("Config1a_VVolume")*1000;
+			
 
 				//★選択肢後の自動文字送り＆スキップを解除
 				case Config1a_CSkipON{
@@ -1619,6 +1624,22 @@ function ConfigSelect()
 				if($SYSTEM_r_button_down||$SYSTEM_XBOX360_button_b_down){$SYSTEM_menu_config_enable=false;break;}
 				if(!$SYSTEM_menu_config_enable){break;}
 				
+				
+
+				//★全体スクロール
+				case Config9f_Scrollbar{}
+				$ConfigScrollbar = Integer((ImageVertical("Config1f_ConfigGround")-500) * ScrollbarValue("Config9f_Scrollbar"));
+				$ConfigScrollbarY = $PreConfigScrollbar - $ConfigScrollbar;
+				if($PreConfigScrollbar!=$ConfigScrollbar){
+					Move("Config0*/*/*", 0, @0, @$ConfigScrollbarY, null, false);
+					Move("Config1*/*/*", 0, @0, @$ConfigScrollbarY, null, false);
+					Move("Config0*", 0, @0, @$ConfigScrollbarY, null, false);
+					Move("Config1*", 0, @0, @$ConfigScrollbarY, null, false);
+				}
+				$PreConfigScrollbar = $ConfigScrollbar;
+
+				
+				
 			if($SYSTEM_keydown_f){
 				if(!#SYSTEM_window_full_lock){
 					#SYSTEM_window_full=!#SYSTEM_window_full;
@@ -1648,6 +1669,7 @@ function ConfigSelect()
 		$LOCAL_XBOX360_button_up_down=false;$LOCAL_XBOX360_button_down_down=false;
 		$SYSTEM_XBOX360_button_left_down=false;$SYSTEM_XBOX360_button_right_down=false;
 		$SYSTEM_XBOX360_button_up_down=false;$SYSTEM_XBOX360_button_down_down=false;
+		Wait(4);
 	}
 }
 
@@ -3054,47 +3076,47 @@ function ConfigMoveStart2()
 {
 	if($ConfigNextFlag!=0){
 		if($ConfigNextFlag==1){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @-344, Dxl1, false);
 			Move("Config1*", 250, @0, @-344, Dxl1, false);
 			$ConfigPage=2;
 			Wait(300);
-			MoveCursor(784,146);
+			;
 		}else if($ConfigNextFlag==2){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @-344, Dxl1, false);
 			Move("Config1*", 250, @0, @-344, Dxl1, false);
 			$ConfigPage=2;
 			Wait(300);
-			MoveCursor(842,146);
+			;
 		}else if($ConfigNextFlag==3){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @344, Dxl1, false);
 			Move("Config1*", 250, @0, @344, Dxl1, false);
 			$ConfigPage=1;
 			Wait(300);
-			MoveCursor(617,394);
+			;
 		}else if($ConfigNextFlag==4){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @344, Dxl1, false);
 			Move("Config1*", 250, @0, @344, Dxl1, false);
 			$ConfigPage=1;
 			Wait(300);
-			MoveCursor(754,394);
+			;
 		}else if($ConfigNextFlag==5){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @-224, Dxl1, false);
 			Move("Config1*", 250, @0, @-224, Dxl1, false);
 			$ConfigPage=3;
 			Wait(300);
-			MoveCursor(862,337);
+			;
 		}else if($ConfigNextFlag==6){
-			MoveCursor(0,0);
+			;
 			Move("Config1*/*/*", 250, @0, @224, Dxl1, false);
 			Move("Config1*", 250, @0, @224, Dxl1, false);
 			$ConfigPage=2;
 			Wait(300);
-			MoveCursor(372,466);
+			;
 		}
 		$ConfigNextFlag=0;
 		ConfigFocus();
@@ -3125,9 +3147,9 @@ function ConfigDefaultInit()
 			CreateName("MSGWND");
 		}
 
-		$DialogText01="全ての項目を初期設定に戻します";
-		$DialogText02="よろしいですか？";
-//		$DialogText03="よろしいですか？";
+		$DialogText01="Сбросить все настройки по умолчанию?";
+		$DialogText02=" ";
+//		$DialogText03=" ";
 		
 		//▲画像ロード
 		LoadImage("MSGWND/IMG_yes_on","cg/sys/dialog/yes-002.png");
@@ -3142,7 +3164,7 @@ function ConfigDefaultInit()
 		//box
 		CreateTexture("MSGWND/MSG_msg",1010000,280,184,"cg/sys/dialog/ダイアログ台座.png");
 		//text
-		SetFont("ＭＳ ゴシック", 18, FFFFFF, 000000, MEDIUM, NULL);
+		SetFont("ArialTahomaUnicod MS", 18, FFFFFF, 000000, MEDIUM, NULL);
 		CreateText("MSGWND/MSG_text1", 1010000, center, middle, Auto, Auto, $DialogText01);
 		CreateText("MSGWND/MSG_text2", 1010000, center, middle, Auto, Auto, $DialogText02);
 //		CreateText("MSGWND/MSG_text3", 1010000, center, middle, Auto, Auto, $DialogText03);
@@ -3197,7 +3219,7 @@ function ConfigDefaultInit()
 		
 		WaitAction("MSGWND/MSG_*",null);
 		
-		MoveCursor(592,304);
+		;
 		
 		if($SYSTEM_XBOX360_change_user_state){DialogChangeState();}
 		$SYSTEM_r_button_down=false;$SYSTEM_XBOX360_button_b_down=false;
@@ -3231,7 +3253,7 @@ function ConfigDefaultInit()
 		Move("MSGWND/MSG_*/*/*",300,@0,@6,null,false);
 		WaitAction("MSGWND/MSG_*",null);
 
-		MoveCursor(0,0);
+		;
 
 		$SYSTEM_r_button_down=false;$SYSTEM_XBOX360_button_b_down=false;
 
